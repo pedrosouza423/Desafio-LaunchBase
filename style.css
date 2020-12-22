@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --cor-empresa: #7159c1;
+}
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body{
+    background-color: #282a36;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+/* Menu */
+header{
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-bottom: 1px solid #333;
+}
+header div{
+    text-align: center;
+}
+header div a{
+    margin: 0 30px;
+    color: white;
+    text-decoration: none;
+}
+header div a:hover{
+    color: var(--cor-empresa);
+    transition: color 400ms;
+}
+
+/* Conteudo */
+#conteudo{
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+    margin-bottom: 0;
+}
+
+#conteudo img{
+    border-radius: 50%;
+    height: 300px;
+    margin-bottom: 5px;
+}
+
+#conteudo h1{
+    font-weight: bold;
+    margin-bottom: 8px;
+    opacity: 0.7;
+}
+
+/* Tecnologias */
+#tecnologias{
+    text-align: center;
+    margin-top: 15px;
+}
+#tecnologias img{
+    width: 70px;
+    margin-top: 5px;
+    margin: 0 10px;
+}
+
+/* Footer */
+footer{
+    text-align: center;
+    margin-top: 15px;
+}
+footer a{
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px  solid var(--cor-empresa);
+}
+
+/* Cards */
+.cards{
+    max-width: 1000px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card{
+    background-color: var(--cor-empresa);
+}
+
+.card img{
+    width: 100%;
+}
+
+.card-content{
+    padding: 10px;
+    text-align: center;
+}
+
+
+.card-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-time{
+    background-color: var(--cor-empresa);
+    filter: brightness(90%);
+    border-radius: 20px;
+}
+
+/* Modal */
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+/* Modal active CLOSE */
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.modal.maximize{
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+/* Close modal */
+
+.close-modal{
+    position: absolute;
+    color: black;
+    right: 1vh;
+    top: 1vh;
+    cursor: pointer;
+}
+
+/* Maximize Modal */
+.maximize-modal{
+    color: black;
+    position: absolute;
+    left: 1vh;
+    top: 1vh;
+    cursor: pointer;
+
+}
+
+/* iframe */
+iframe{
+    width: 100%;
+    height: 100%;
+}
