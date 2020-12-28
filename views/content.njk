@@ -1,0 +1,65 @@
+{% extends 'layout.njk' %}
+
+{% block head%}
+<!--Material icon-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+{% endblock%}
+
+
+{% block content %}
+
+    <div id="conteudo">
+        <h1>Posts favoritos do blog da Rocketseat</h1>
+       
+    </div>
+
+    <!--Cards-->
+    <div class="cards">
+        {% for post in posts %}
+        <div class="card" id="{{post.id}}">
+
+            <div class="card-image">
+                <img src="{{post.image}}" alt="Imagem de {{post.title}}">
+            </div>
+            
+            <div class="card-content">
+                <p>{{post.title}}</p>
+            </div>
+    
+            <div class="card-info">
+                <div class="card-criador">
+                    <p>{{post.by}}</p>
+                </div>
+                <div class="card-time">
+                    <p>{{post.duration}}</p>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <!--Modal-->
+    <div class="modal-overlay">
+        <div class="modal">
+
+            <div class="close-modal">
+                <span class="material-icons">
+                    close
+                </span>
+            </div>
+            <div class="maximize-modal">
+                <span class="material-icons">
+                    fullscreen
+                    </span>
+            </div>
+
+            <!--Iframe do site-->
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+{% endblock%}
