@@ -87,6 +87,7 @@ footer a{
 
 .card{
     background-color: var(--cor-empresa);
+    display: grid;
 }
 
 .card img{
@@ -104,6 +105,7 @@ footer a{
     grid-template-columns: 1fr 1fr;
     padding: 10px;
     text-align: center;
+    align-items: center;
 }
 
 .card-time{

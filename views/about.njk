@@ -1,0 +1,24 @@
+{% extends 'layout.njk' %}
+
+
+{% block content %}
+    <div id="conteudo">
+        <img src="{{about.image_url}}" alt="Logo da {{about.name}}">
+        <h1>{{about.name}}</h1>
+        <p>{{about.content}}</p>
+       
+    </div>
+
+    <div id="tecnologias">
+        <p>Tecnologias:</p>
+        {% for tecnologia in about.tecnologias %}
+        <img src="{{tecnologia.link}}" alt="{{tecnologia.name}}">
+        {% endfor%}
+    </div>
+
+    <footer>
+        {% for foot in about.foots %}
+        <a href="{{foot.link}}" target="_blank">{{foot.name}}</a>
+        {% endfor %}
+    </footer>
+{% endblock %}
